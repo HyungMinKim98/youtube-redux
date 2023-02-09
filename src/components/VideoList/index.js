@@ -5,7 +5,7 @@ import { useDispatch , useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getVideoList } from '../../store/video/videoSlice';
 import {videoUrl} from './../../lib/api';
-import {MoonLoader} from 'react-spinners'
+import {MoonLoader} from 'react-spinners';
 
 const VideoList = ({display}) => {
   const dispatch = useDispatch();
@@ -13,8 +13,8 @@ const VideoList = ({display}) => {
   useEffect(() => {
       dispatch(getVideoList(videoUrl))
   },[])
-   
-  if(loading) {
+  
+  if(loading){
       return (
         <MoonLoader 
           color="#36d7b7" 
@@ -30,9 +30,9 @@ const VideoList = ({display}) => {
           speedMultiplier={1}
         />
       )
-    } 
+    }
     return (
-        <ul className={display === 'grid' ? 'videoList VideoGrid' : 'videoList VideoRowList'}>
+      <ul className={display === 'grid' ? 'videoList VideoGrid' :'videoList VideoRowList'}>
           {
              data.map((item)=>(
                 <VideoItem 
