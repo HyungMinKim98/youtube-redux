@@ -1,6 +1,5 @@
 
-/* const API_KEY=`AIzaSyDz86Fx0kwa38IzFTI5CuJSMVTL-mQ4gLs`; */
-const API_KEY=`AIzaSyDKTJv-ZRq0QOWMPsXnNGxmuGEfTQpfQ-I`;
+const API_KEY=process.env.REAC_APP_API_KEY;
 
 export const videoUrl=`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=kr&key=${API_KEY}`
 
